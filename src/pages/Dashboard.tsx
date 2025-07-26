@@ -11,10 +11,15 @@ const Dashboard = () => {
 
        const [show,setShow]=useState(false);
        const {content,refresh}=useContent();
+       const [deleted,setDeleted]=useState(false);
        
        useEffect(()=>{
-        refresh;
-       },[show]);
+        refresh();
+          
+       },[show,deleted]);
+
+
+   
 
   return (
     
@@ -27,11 +32,11 @@ const Dashboard = () => {
         <Button  text="Share Note" variant="secondary" startIcon={<IoShareSocialSharp/>}/>
         </div>
         <div className='flex gap-4 flex-wrap pt-4 '>
-          {content.map(({type,link,title})=>{
+          {content.map(({type,link,title,_id})=>{
            
-              return  <Card type={type} link={link} title={title}/>
+              return  <Card   key={_id} type={type} link={link} title={title} id={_id}  onDelete={() => setDeleted(!deleted)}  />
           })}
-          { console.log(content)}
+          
        
         
         </div>
