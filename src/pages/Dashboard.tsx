@@ -23,7 +23,7 @@ const Dashboard = () => {
 
   return (
     
-    <div className='flex'>
+    <div className='flex bg-slate-300'>
       <Sidebar/>
     <div className='p-4 bg-slate-300 w-full h-screen'>
         <ContentModel   show={show}  close={()=>{setShow(!show)}}/>

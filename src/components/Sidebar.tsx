@@ -2,7 +2,7 @@ import { FaYoutube } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 const Sidebar = () => {
   return (
-    <div className="w-[20%] border-r-2 border-gray-900">
+    <div className="w-[20%] border-r-2 border-gray-900 bg-slate-50">
       <div className="  h-screen ml-4 mt-4">
            <div className="font-bold text-2xl tracking-tighter">
             NOTE_ME
